@@ -7,6 +7,8 @@ Never again will you suffer from cross-browser inconsistencies, with
 this powerful application server (or "app server", if you prefer), all
 users, everywhere, get an 100% equal rendered page.
 
+### Demo: http://why-demo.herokuapp.com/
+
 ## But how??
 
 `why` (name pending) acts as a proxy to your static web application, by
