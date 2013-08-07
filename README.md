@@ -42,3 +42,8 @@ Well, it does actually work.
 4. Install dependencies: `$ cd why && npm install`
 4. Start the server: `$ cd why && bin/server.js [--port 8181 --privPort 9292 --root /path/to/your/app]`
 4. Check it :cat:
+
+## To-do:
+
+- Generate an image map of all links in the app, so things are clickable. Another option is to just do it off click coordinates
+- Add a kick-ass example web app
