@@ -40,5 +40,5 @@ Well, it does actually work.
 2. Install phantomjs, make sure it's in your `$PATH`: `$ npm -g install phantomjs`
 3. Clone this repo: `$ git clone https://github.com/filp/why.git`
 4. Install dependencies: `$ cd why && npm install`
-4. Start the server: `$ cd why && bin/server.js [--port 8181 --privPort 9292]`
+4. Start the server: `$ cd why && bin/server.js [--port 8181 --privPort 9292 --root /path/to/your/app]`
 4. Check it :cat:
