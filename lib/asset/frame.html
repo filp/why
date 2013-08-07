@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      body, html { margin: 0; padding: 0; }
+    </style>
+  </head>
+  <body>
+    <div id="why-frame"></div>
+    <script>
+      var frame   = document.getElementById("why-frame"),
+          img     = null
+      ;
+
+      function getImgForPath(path) {
+        var xmlHttp = new XMLHttpRequest;
+
+        // If the request worked out OK, replace the image in the frame,
+        // and we're done here:
+        xmlHttp.onreadystatechange = function() {
+          if(xmlHttp.readyState == 4) {
+            img.src = xmlHttp.responseText;
+          }
+        };
+
+        xmlHttp.open("GET",
+            "/?path=" + encodeURIComponent(path)
+          + "&w=" + window.innerWidth
+        ,true);
+        xmlHttp.send();
+      }
+
+      img = new Image();
+      frame.appendChild(img);
+      getImgForPath("/");
+
+    </script>
+  </body>
+</html>

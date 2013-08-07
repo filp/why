@@ -8,3 +8,7 @@ var path = require("path"),
 if(argv.root && typeof argv.root == "string") {
   why.webRoot(argv.root);
 }
+
+// Allow a --port and --privPort argument for specifying the
+// public and private ports respectivelly, then get going:
+why.start(parseInt(argv.port) || 8181, parseInt(argv.privPort) || 9292);
