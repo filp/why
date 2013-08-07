@@ -15,16 +15,18 @@ captures a screenshot of your webpage, in its ideal webkit environment,
 at the correct dimensions for the user's device, and embeds it in a light-weight
 frame.
 
-*Pros:*
-	- it's ajaxy
-	- faster
-	- webkit
-	- nodejs?!
-	- retina ready probably
-	- web scale
+#### Pros:
+- it's ajaxy
+- faster
+- webkit
+- nodejs?!
+- retina ready probably
+- web scale
+- renders cross-browser issues a thing of the past
+- webkit
 
-*Cons:*
-	- none
+#### Cons:
+- none
 
 ## Are you serious?
 
