@@ -1,0 +1,19 @@
+{
+  "name": "why",
+  "description": "Zooomr koofers cotweet dropio plaxo plickers, sifteo heekya meebo plickers chegg",
+  "keywords": ["why", "phantomjs", "webscale", "2.0", "thefuture"],
+  "license": "MIT",
+  "author": "Filipe Dobreira <https://github.com/filp>",
+  "main": "lib/why.js",
+  "scripts": {
+    "start": "node bin/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/filp/why.git"
+  },
+  "dependencies": {
+    "webshot": "~0.5.*",
+    "node-static": "~0.6.*"
+  }
+}
