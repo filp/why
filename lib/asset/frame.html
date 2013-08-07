@@ -41,12 +41,17 @@
 
               el.onclick = function(event) {
                 if(link[0].substr(0, 4) != "http") {
+                  for(aEl in activeLinks) {
+                    document.body.removeChild(activeLinks[aEl]);
+                    activeLinks = [];
+                  }
+
                   getImgForPath(link[0]);
                   event.preventDefault();
                   return false;
                 }
               }
-
+              activeLinks.push(el);
               document.body.appendChild(el);
             }
           }
