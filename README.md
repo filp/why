@@ -30,7 +30,7 @@ frame.
 
 Well, it does actually work.
 
-![web scale](http://i.imgur.com/GYeamse.gif "web scale!")
+<img src="http://i.imgur.com/GYeamse.gif" width="256">
 
 ## Usage:
 
