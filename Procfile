@@ -1,1 +1,1 @@
-web: node bin/server.js
+web: node bin/server.js --port=$PORT
