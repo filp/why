@@ -10,8 +10,9 @@
   <body>
     <div id="why-frame"></div>
     <script>
-      var frame   = document.getElementById("why-frame"),
-          img     = null
+      var frame       = document.getElementById("why-frame"),
+          img         = null,
+          activeLinks = []
       ;
 
       function getImgForPath(path) {
@@ -21,7 +22,33 @@
         // and we're done here:
         xmlHttp.onreadystatechange = function() {
           if(xmlHttp.readyState == 4) {
-            img.src = xmlHttp.responseText;
+            var resp = JSON.parse(xmlHttp.responseText);
+            img.src  = resp.body;
+
+            // Make some clickies:
+            for(var i = 0; i < resp.links.length; i++) {
+              var link = resp.links[i];
+              // really, lets just create floating elements, what's the worst that can happen anyway
+              var el   = document.createElement("a");
+              el.style.display    = "block";
+              el.style.position   = "absolute";
+              el.style.left       = link[1] + "px";
+              el.style.top        = link[2] + "px";
+              el.style.width      = link[3] + "px";
+              el.style.height     = link[4] + "px";
+              el.style.float      = "left";
+              el.href             = link[0 ];
+
+              el.onclick = function(event) {
+                if(link[0].substr(0, 4) != "http") {
+                  getImgForPath(link[0]);
+                  event.preventDefault();
+                  return false;
+                }
+              }
+
+              document.body.appendChild(el);
+            }
           }
         };
 
@@ -34,7 +61,7 @@
 
       img = new Image();
       frame.appendChild(img);
-      getImgForPath("/");
+      getImgForPath(window.location.pathname);
 
     </script>
   </body>

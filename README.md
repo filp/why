@@ -30,7 +30,7 @@ frame.
 
 ## Are you serious?
 
-Well, it does actually work.
+Well, it does actually work. Yes, you can even click links...mostly.
 
 <img src="http://i.imgur.com/GYeamse.gif" width="256">
 
@@ -45,5 +45,4 @@ Well, it does actually work.
 
 ## To-do:
 
-- Generate an image map of all links in the app, so things are clickable. Another option is to just do it off click coordinates
 - Add a kick-ass example web app
