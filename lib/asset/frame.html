@@ -47,6 +47,7 @@
                   }
 
                   getImgForPath(link[0]);
+                  history.pushState(null, null, link[0]);
                   event.preventDefault();
                   return false;
                 }
